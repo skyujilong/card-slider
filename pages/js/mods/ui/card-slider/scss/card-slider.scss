@@ -1,0 +1,12 @@
+.card-slider {
+    overflow: hidden;
+    & > ul {
+        position: relative;
+        transition:transform 0.5s;
+        & > li{
+            transition:transform 0.5s;
+            position: absolute;
+            top: 0;
+        }
+    }
+}
