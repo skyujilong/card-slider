@@ -11,4 +11,15 @@
             top: 0;
         }
     }
+    .card-scroll-bar{
+        background: rgba(51, 51, 51, 0.6);
+        .card-bar{
+            display: block;
+            height: 2px;
+            background-color: #fff;
+            width: 20px;
+            transform: translateZ(0);
+            transition:transform 0.5s;
+        }
+    }
 }
