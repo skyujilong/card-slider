@@ -2,8 +2,10 @@
     overflow: hidden;
     & > ul {
         position: relative;
+        transform: translateZ(0);
         transition:transform 0.5s;
         & > li{
+            transform: translateZ(0);
             transition:transform 0.5s;
             position: absolute;
             top: 0;

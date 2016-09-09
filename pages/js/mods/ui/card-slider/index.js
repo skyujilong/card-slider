@@ -30,20 +30,26 @@ function CardSlider($el) {
                     var zIndex = $(item).css('zIndex');
                     if (activeNum == index) {
                         $(item).css({
+                            '-webkit-transform-origin': 'center center',
                             'transform-origin': 'center center',
                             '-webkit-transform': 'scale(1)',
+                            'transform':'scale(' + scale + ')',
                             'zIndex': zIndex - 0 + 1
                         });
                     } else if (activeNum > index) {
                         $(item).css({
+                            '-webkit-transform-origin': 'left center',
                             'transform-origin': 'left center',
                             '-webkit-transform': 'scale(' + scale + ')',
+                            'transform':'scale(' + scale + ')',
                             'zIndex': zIndex - 1
                         });
                     } else {
                         $(item).css({
+                            '-webkit-transform-origin': 'right center',
                             'transform-origin': 'right center',
                             '-webkit-transform': 'scale(' + scale + ')',
+                            'transform':'scale(' + scale + ')',
                             'zIndex': zIndex - 0 + 1
                         });
                     }
@@ -64,20 +70,26 @@ function CardSlider($el) {
                     var zIndex = $(item).css('zIndex');
                     if (activeNum == index) {
                         $(item).css({
+                            '-webkit-transform-origin': 'center center',
                             'transform-origin': 'center center',
                             '-webkit-transform': 'scale(1)',
+                            'transform':'scale(' + scale + ')',
                             'zIndex': zIndex - 0 + 1
                         });
                     } else if (activeNum > index) {
                         $(item).css({
+                            '-webkit-transform-origin': 'left center',
                             'transform-origin': 'left center',
                             '-webkit-transform': 'scale(' + scale + ')',
+                            'transform':'scale(' + scale + ')',
                             'zIndex': zIndex - 0 + 1
                         });
                     } else {
                         $(item).css({
+                            '-webkit-transform-origin': 'right center',
                             'transform-origin': 'right center',
                             '-webkit-transform': 'scale(' + scale + ')',
+                            'transform':'scale(' + scale + ')',
                             'zIndex': zIndex - 1
                         });
                     }
@@ -98,6 +110,7 @@ function CardSlider($el) {
                     '-o-transform': 'scale(' + scale + ')',
                     '-moz-transform': 'scale(' + scale + ')',
                     '-webkit-transform': 'scale(' + scale + ')',
+                    'transform':'scale(' + scale + ')',
                     '-ms-transform-origin': 'right center',
                     '-o-transform-origin': 'right center',
                     '-webkit-transform-origin': 'right center',
