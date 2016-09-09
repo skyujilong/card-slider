@@ -145,6 +145,7 @@ function CardSlider($el,opt) {
             itemSpace = Math.floor((width - itemWidth) / 2 / length);
         },
         initBar: function(){
+            $el.append('<div class="card-scroll-bar"><i class="card-bar"></i></div>');
             this.$bar = $el.find('.card-scroll-bar');
             this.$barBtn = $el.find('.card-bar');
             this.$barWidth = this.$bar.width();
