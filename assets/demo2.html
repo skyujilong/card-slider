@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>card-slider demo</title>
+        <link rel="stylesheet" href="./css/demo2.css" media="screen" title="no title">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui">
+        <script type="text/javascript">
+            (function() {
+                function setFont() {
+                    var clientWidth = (document.documentElement || document.body.parentNode).clientWidth;
+                    var rootrem = clientWidth * 50 / 375;
+                    (document.documentElement || document.body.parentNode).style.fontSize = rootrem + "px";
+                }
+                setFont();
+                window.onresize = setFont;
+            })();
+        </script>
+        <script src="./js/zepto.min.js" charset="utf-8"></script>
+        <script src="../lib/main.js" charset="utf-8"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            var slider = new CardSlider($("#demo"),{
+                bar:false
+            });
+            slider.on('change',function(num){
+                console.log(num);
+            });
+            console.log('log...........!!!!');
+            console.log('hello world!!');
+        });
+        </script>
+    </head>
+    <body>
+        <div id="demo" class="">
+            <ul>
+                <li class="item1"></li>
+                <li class="item2"></li>
+                <li class="item3"></li>
+                <li class="item4"></li>
+                <li class="item5"></li>
+            </ul>
+            <!-- <div class="card-scroll-bar">
+                <i class="card-bar"></i>
+            </div> -->
+        </div>
+    </body>
+</html>
