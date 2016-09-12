@@ -78,7 +78,7 @@ module.exports = ((isDev) => {
         }),
         output: {
             path: isDev ? testDir : assets,
-            publicPath: isDev ? "/test/" : "https://snews.sinaimg.cn/projects/mq/",
+            publicPath: isDev ? "/test/" : "./",
             chunkFilename: isDev ? "js/[name]-chunk.js" : "js/[name]-chunk.js",
             filename: isDev ? "js/[name]-[hash].js" : "js/[name].js"
         },
