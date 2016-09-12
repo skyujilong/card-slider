@@ -17,3 +17,6 @@ slider.on('change',function(num){
 - 支持自动滚动功能。
 - 添加更多事件的支持。
 - 打包好源码，目前没有打包。
+
+### 例子在assets文件夹内 ###
+checkout 项目之后打开assets目录，然后用浏览器运行assets文件夹下的demo.html文件。
