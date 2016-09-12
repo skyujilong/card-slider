@@ -2,10 +2,14 @@
     overflow: hidden;
     & > ul {
         position: relative;
+        -webkit-transform: translateZ(0);
         transform: translateZ(0);
+        -webkit-transition:-webkit-transform 0.5s;
         transition:transform 0.5s;
         & > li{
+            -webkit-transform: translateZ(0);
             transform: translateZ(0);
+            -webkit-transition:-webkit-transform 0.5s;
             transition:transform 0.5s;
             position: absolute;
             top: 0;
@@ -18,7 +22,9 @@
             height: 2px;
             background-color: #fff;
             width: 20px;
+            -webkit-transform: translateZ(0);
             transform: translateZ(0);
+            -webkit-transition:-webkit-transform 0.5s;
             transition:transform 0.5s;
         }
     }

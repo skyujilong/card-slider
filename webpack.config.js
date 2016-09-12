@@ -80,7 +80,7 @@ module.exports = ((isDev) => {
             path: isDev ? testDir : assets,
             publicPath: isDev ? "/test/" : "https://snews.sinaimg.cn/projects/mq/",
             chunkFilename: isDev ? "js/[name]-chunk.js" : "js/[name]-chunk.js",
-            filename: isDev ? "js/[name].js" : "js/[name].js"
+            filename: isDev ? "js/[name]-[hash].js" : "js/[name].js"
         },
         resolve: {
             root: [path.join(__dirname, 'js', 'main')],
