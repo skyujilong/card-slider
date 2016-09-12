@@ -39,7 +39,19 @@ gulp.task('dev-publish-img',['clean'],()=>{
         .pipe(gulp.dest(path.join(__dirname,'test/outer-img')));
 });
 gulp.task('publish-img',['clean'],()=>{
-    console.log(path.join(__dirname,'pages','outer-img','*.*'));
     gulp.src(path.join(__dirname,'pages','outer-img','*.*'))
         .pipe(gulp.dest(path.join(__dirname,'assets/outer-img')));
+});
+
+gulp.task('cleanLib', function () {
+    gulp.src(path.join(__dirname, 'lib'))
+        .pipe(clean());
+});
+gulp.task('lib', ['cleanLib'], function (done) {
+    let webpackConfig = require('./webpack.lib.config.js')(true);
+    webpack(webpackConfig, (err, stats) => {
+        if (err) throw new gutil.PluginError('webpack', err);
+        gutil.log('[webpack]', stats.toString({colors: true}));
+        done();
+    });
 });
